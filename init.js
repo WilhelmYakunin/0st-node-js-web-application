@@ -33,7 +33,7 @@ fs.readFile( filePath, ( err, data ) => {
 
 ; function getPage( name, res, statusCode = 200 ) {
 if ( name == '/' ) {
-  name = 'page1';
+  name = 'home';
 }
 
 fs.readFile('/nodejs/' + name + '.html', 'utf8', ( err, content ) => {

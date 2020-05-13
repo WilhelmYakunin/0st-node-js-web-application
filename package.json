@@ -1,0 +1,14 @@
+{
+    "name": "0st-node-app"
+  , "version": "0.0.1"
+  , "scripts": { "start": "node init.js" }
+  , "devDependencies": {
+      "mocha": "1.7.0"
+    , "should": "1.2.1"
+    , "supertest": "0.4.0"
+  }
+  , "engines": {
+      "node": "0.8.x"
+    , "npm": "1.1.x"
+  }
+}

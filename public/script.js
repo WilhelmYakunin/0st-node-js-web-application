@@ -24,25 +24,27 @@ btn.addEventListener('click', function (evt) {
     } return count--;
 });
 
-let introInfoStructure = document.querySelector('.intro-structur');
-let paperPrototypeContainer = document.querySelector('.paper-prototype-container');
+let introInfoStructure = document.querySelector('.structure');
 
 function hideInroInfoDiv () {
   introInfoStructure.classList.add("un-visible");
  };
+ 
+setTimeout(hideInroInfoDiv, 5000);
+
+let paperPrototypeContainer = document.querySelector('.paper-prototype-container');
 
 function hideInroPaperPrototypeDiv () {
   paperPrototypeContainer.classList.add("un-visible");
 };
 
-setTimeout(hideInroInfoDiv, 5000);
 setTimeout(hideInroPaperPrototypeDiv, 5000);
 
 
 let prototypeText = document.querySelector('.interactive-portotype-text');
 let arr = ['и','н', 'т', 'е', 'р', 'а', 'к', 'т', 'и', 'в', 'н', 'ы', 'й',
           '&nbsp;', 'п', 'р', 'о', 'т', 'о', 'т', 'и', 'п'];
-let delay = 200;
+let delay = 150;
 for(let i = 0; i <arr.length; i += 1) {
     setTimeout(function(i) {
         return function() {
