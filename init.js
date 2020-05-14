@@ -30,7 +30,7 @@ fs.readFile( filePath, ( err, data ) => {
 } else {
   getPage( req.url, res );
 }
-}).listen(8888, function() {
+}).listen(port, function() {
   console.log("App is running on port " + port)
 });
 
