@@ -39,10 +39,10 @@ if ( name == '/' ) {
   name = 'home';
 }
 
-fs.readFile('/nodejs/' + name + '.html', 'utf8', ( err, content ) => {
+fs.readFile('./' + name + '.html', 'utf8', ( err, content ) => {
 
 if(!err) {
-  fs.readFile( '/nodejs/layouts/default.html', 'utf8', ( err, layout ) => {
+  fs.readFile( './layouts/default.html', 'utf8', ( err, layout ) => {
     if ( err ) throw err;
 
 layout = layout.replace(/\{\{get content\}\}/g, content );
