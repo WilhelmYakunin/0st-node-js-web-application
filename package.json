@@ -11,9 +11,6 @@
     },
     "engines": {
         "node": "0.8.x",
-        "npm": "1.1.x"
+        "npm": "6.13.4"
     },
-    "dependencies": {
-        "fullpage.js": "^3.0.8"
-    }
-}
+ }
