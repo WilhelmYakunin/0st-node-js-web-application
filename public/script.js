@@ -63,3 +63,16 @@ function hideInteractivePortotypeDiv () {
 };
 
 setTimeout(hideInteractivePortotypeDiv, 5000);
+
+let links = document.querySelectorAll("nav a");
+let aHover = ['#46ac4e', '#3fade0', '#ffca30', '#df386e'];
+
+for (let i = 0; i < aHover.length; i++ ) {
+  if (window.location.href == links[i]) {
+    links[i].style.color = aHover[i];
+  }
+};
+
+
+
+
