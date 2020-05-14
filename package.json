@@ -10,7 +10,6 @@
         "supertest": "0.4.0"
     },
     "engines": {
-        "node": "0.8.x",
-        "npm": "6.13.4"
+        "node": "0.8.x"
     }
  }
