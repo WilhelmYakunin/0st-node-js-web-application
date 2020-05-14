@@ -2,6 +2,7 @@
 
 let fs = require( 'fs' );
 let http = require( 'http' );
+const port = process.env.PORT || 8888;
 
 http.createServer( function ( req, res ) {
 
@@ -29,7 +30,9 @@ fs.readFile( filePath, ( err, data ) => {
 } else {
   getPage( req.url, res );
 }
-}).listen(8888);
+}).listen(8888, function() {
+  console.log("App is running on port " + port)
+});
 
 ; function getPage( name, res, statusCode = 200 ) {
 if ( name == '/' ) {
