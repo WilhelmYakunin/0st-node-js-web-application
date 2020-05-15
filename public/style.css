@@ -53,15 +53,6 @@ main {
   height: 100%;
 }
 
-video {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
 .viewport-header {
   position: relative;
   margin-top: 80vh;
@@ -82,6 +73,15 @@ video {
 .viewport-header span {
   display: inline-block;
   margin-top: 10px;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .main {
