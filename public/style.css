@@ -1,3 +1,5 @@
+/* 0. START OF COMMON PAGES STYLES */
+
 :root
 {
 	--header-footer-fit: 10%;
@@ -30,6 +32,119 @@ html, body {
 main {
   margin-top: var(--header-footer-fit);
 }
+
+.page-not-found {
+  position: absolute;
+  
+  height: 100vh;
+  width: 100%;
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* END OF COMMON PAGES STYLES */
+
+
+/* 1. START OF HOME PAGE STYLES */
+
+.homepage-container {
+  height: 100%;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.viewport-header {
+  position: relative;
+  margin-top: 80vh;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.viewport-header h1 {
+  text-transform: uppercase;
+  text-align: center;
+  color: #3fade0;
+}
+
+.viewport-header span {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.main {
+  background: white;
+  color: black;
+  position: relative;
+  padding: 1rem;
+}
+
+.main p {
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+.main li {
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+.homepage-tour {
+  margin: auto;
+  padding-top: 80px;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.homepage-tour-item {
+  max-width: 40%;
+  min-height: 400px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.homepage-pic {
+  max-height: 400px;
+  height: 350px;
+  filter: grayscale(100);
+}
+
+@keyframes picToColors {
+  from { filter: grayscale(100); position: relative; bottom: 0px; }
+  to { filter: grayscale(0); position: relative; bottom: 10px }
+}
+
+.homepage-pic:hover,
+.homepage-pic:active {
+  animation-name: picToColors;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+/* END HOMEPAGE STYLES */
+
+
+/* 2. START OF MENU, BUTTON AND BUTTON CONTAINER STYLES */
 
 .menu-container {
   height: var(--header-footer-fit);
@@ -256,7 +371,7 @@ span:last-child {
 
 .visible {
   animation: visible;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
   animation-fill-mode: both;
@@ -265,7 +380,7 @@ span:last-child {
 
 .un-visible {
   animation: unVisible;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
   animation-fill-mode: both;
@@ -315,11 +430,6 @@ a {
   text-decoration: none;
 }
 
-a:hover, a:focus,
-a:active {
-  color: #feca30;
-}
-
 .copyright {
   position: fixed;
   bottom: 0px;
@@ -327,6 +437,12 @@ a:active {
   color: white;
 }
 
+/* END OF MENU, BUTTON AND BUTTON CONTAINER STYLES */
+
+
+/* 3. START OF USERS STYLES */
+
+/* 3.1 INTRO START */
 .intro-users {
   position: absolute; 
   top: 0;
@@ -348,7 +464,7 @@ a:active {
   overflow: hidden;
 
   animation-name: introUsers;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-iteration-count: 1;
   animation-timing-function: ease-out;
 
@@ -366,7 +482,7 @@ a:active {
 
 .letter-T {
   animation-name: introUsersT;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-iteration-count: 1;
   animation-timing-function: ease-out;
   text-shadow: 4px 4px 4px rgb(197, 191, 178);
@@ -389,359 +505,9 @@ a:active {
   100% { color: #46ac4e; opacity: 0; visibility: hidden; }
 }
 
-.structure {
-  position: fixed;
-  top: 0;
+/* INTOR END */
 
-  height: 100vh;
-  width: 100%;
-
-  text-transform: uppercase;
-  color: #40ade0;
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  
-  letter-spacing: 10px;
-  font-size: 50px;
-
-  overflow: hidden;
-}
-
-@keyframes introInformation {
-  0% { margin-left: 150px; } 
-  100% { margin-right: 0px; }
-}
-
-.intro-information {
-  animation-name: introInformation;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-}
-
-@keyframes introStructure {
-  0% { margin-right: 150px; } 
-  100% { margin-left: 0px; }
-}
-
-.intro-structure {
-  animation-name: introStructure;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-}
-
-.paper-prototype-container {
-  position: fixed;
-  top: 0;
-
-  height: 100vh;
-  width: 100%;
-  text-transform: uppercase;
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-  letter-spacing: 10px;
-  font-size: 50px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@keyframes firstBlockAppearance {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.first-block {
-  position: relative;
-  
-  left: 30%;
-  
-  height: 50px;
-  width: 150px;
-
-  padding-top: 20px;
-
-  border: 5px dashed grey;
-  align-self: flex-start;
-
-  background-color: rgb(173, 230, 195);
-
-  color: whitesmoke;
-  text-align: center;
-  
-  animation-name: firstBlockAppearance;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-}
-
-@keyframes secondBlockAppearance {
-  0% { opacity: 0; }
-  10% { opacity: 0; }
-  50% { opacity: 1; }
-}
-
-.second-block {
-  position: relative;
-  top: -10%;
-  right: 30%;
-  
-  height: 50px;
-  width: 150px;
-  padding-top: 20px;
-
-  border: 5px dashed grey;
-  align-self: flex-end;
-  
-  background-color: lightblue;
-
-  text-align: center;
-  color: whitesmoke;
-
-  animation-name: secondBlockAppearance;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-}
-
-@keyframes thirdBlockAppearance {
-  0% { opacity: 0; }
-  20% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.third-block {
-  position: relative;
-  top: 10%;
-  
-  height: 50px;
-  width: 500px;
-  padding-top: 20px;
-
-  border: 5px dashed grey;
-
-  text-align: center;
-  color: black;
-
-  animation-name: thirdBlockAppearance;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-}
-
-@keyframes introPaperPrototype {
-  0% { color: #ffe083; text-shadow: 5px 5px #a1afa2; }
-  100% { color: #ffca30; text-shadow: 1px 1px #161616; }
-}
-
-.paper-prototype-text {
-  color: #ffe083;
-  text-shadow: 1px 1px #161616;
-
-  animation-name: introPaperPrototype;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-}
-
-.interactive-portotype {
-  position: fixed; 
-  top: 0;
-
-  height: 100vh;
-  width: 100%;
-  text-transform: uppercase;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.proto-coursor {
-  height: 40px;
-  border-right: 2px solid black;
-  font-size: 40px;
-  font-weight: 400;
-
-  opacity: 1;
-  font-weight: 200;
-  animation: blink 0.7s infinite;
-}
-
-
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-
-.big-grey {
-  font-size: 40px;
-  color: #df386e;
-  letter-spacing: 10px;
-}
-
-.page-not-found {
-  position: absolute;
-  
-  height: 100vh;
-  width: 100%;
-    
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-@keyframes hidden {
-  0% { opacity: 0; }
-  85% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.prototype-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  animation-name: hidden;
-  animation-duration: 7s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-}
-
-.prototype-wrapper {
-  min-height: 300px;
-  max-width: 1100px;
-
-  display: flex;
-  align-items: flex-start;
-}
-
-.prototype-preview {
-  max-width: 30%;
-}
-
-.prototype-preview h1 {
-  text-transform: uppercase;
-  padding: 0;
-  margin: 0;
-  color: #df386e;
-}
-
-.angle-grey {
-  margin-left: 30%;
-  max-width: 40%;
-  border: 150px solid #fff;
-  border-top-width: 0;
-  border-left-width: 0;
-  border-bottom-color: #df386e;
-  border-right-color: transparent;
-}
-
-.prototype-picture-first {
-  max-width: 30%;
-}
-
-.prototype-picture-two {
-  margin-right: 20px;
-
-  margin-left: 13%;
-  width: 10%;
-}
-
-.prototype-features-preview {
-  align-self: baseline;
-
-  margin-left: 5%;
-
-  width: 40%;
-}
-
-.prototype-features-preview:after {
-  position: relative;
-  right: 15%;
-  bottom: 5%;
-
-  content: "1";
-  color: #df386e;
-  font-size: 40px;
-}
-
-.prototype-features-preview h2 {
-  margin-top: 0;
-}
-
-.prototype-features-items {
-  display: flex;
-  flex-direction: column;
-}
-
-.prototype-features-items div {
-  margin-bottom: 50px;
-}
-
-.prototype-features-item {
-  list-style: none;
-}
-
-.fiatures-div-first {
-  min-width: 1000px;
-
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.fiatures-div-first:before {
-  content: "2";
-  color: #df386e;
-  font-size: 40px;
-}
-
-.fiatures-div-second {
-  min-width: 1000px;
-
-  display: flex;
-  justify-content: space-between;
-}
-
-.fiatures-div-second:after {
-  position: relative;
-  right: 60%;
-
-  content: "3";
-  color: #df386e;
-  font-size: 40px;
-}
-
-.fiatures-div-third {
-  min-width: 1000px;
-
-  display: flex;
-  justify-content: space-between;
-}
-
-.fiatures-div-third:before {
-  content: "4";
-  color: #df386e;
-  font-size: 40px;
-}
-
-.prototype-features-items li {
-  max-width: 30%;
-}
-
-/* START OF USERS STYLES */
+/* 3.2 USERS MAIN PAGE START */
 
 .users {
   display: flex;
@@ -750,7 +516,7 @@ a:active {
   align-items: center;
 
   animation-name: hidden;
-  animation-duration: 6s;
+  animation-duration: 3s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
@@ -897,10 +663,283 @@ a:active {
  .users-customize {
    width: 30%;
  }
- 
+
 /* END OF USERS STYLES */
 
-/* START OF PAPER PROTOTYPE */
+
+/* 4 START OF INFO STRUCTURE */
+
+/* 4.1 INFO STRUCTURE INTRO START */
+
+.structure {
+  position: fixed;
+  top: 0;
+
+  height: 100vh;
+  width: 100%;
+
+  text-transform: uppercase;
+  color: #40ade0;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  letter-spacing: 10px;
+  font-size: 50px;
+
+  overflow: hidden;
+}
+
+@keyframes introInformation {
+  0% { margin-left: 150px; } 
+  100% { margin-right: 0px; }
+}
+
+.intro-information {
+  animation-name: introInformation;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+
+@keyframes introStructure {
+  0% { margin-right: 150px; } 
+  100% { margin-left: 0px; }
+}
+
+.intro-structure {
+  animation-name: introStructure;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+
+/* END INTRO STRUCTURE */
+
+/* 4.2 START INFO STRUCTURE MAIN PAGE */
+
+.structure-sections {
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+
+  animation-name: hidden;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+
+.structure-wrapper {
+  height: 350px;
+  max-width: 1100px;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.structure-preview {
+  width: 30%;
+}
+
+.structure-preview h1 {
+  margin: 0;
+  padding: 0;
+
+  color: #3fade0;
+  text-transform: uppercase;
+}
+
+.structure-preview-pic:before {
+  content: "";
+
+  position: relative;
+  top: -200px;
+  left: -30%;
+
+  border: 150px solid;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-bottom-color: #3fade0;
+  border-right-color: transparent;
+}
+
+.structure-preview-pic {
+  width: 30%;
+}
+
+.structure-features-items {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.structure-wrapper-fiatures {
+  margin-bottom: 40px;
+
+  min-width: 1100px;
+  max-width: 1100px;
+  min-height: 200px;
+  
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.structure-wrapper-fiatures {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.structure-features-item {
+  width: 30%;
+  list-style: none;
+}
+
+.structure-features-item h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.structure-feature-pic {
+  width: 30%;
+  max-height: 300px;
+}
+
+/* END OF INFO STRUCTURE */
+
+
+/* 5. START OF PAPER PROTOTYPE */
+
+/* 5.1 INTRO START */
+
+.paper-prototype-container {
+  position: fixed;
+  top: 0;
+
+  height: 100vh;
+  width: 100%;
+  text-transform: uppercase;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  letter-spacing: 10px;
+  font-size: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes firstBlockAppearance {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.first-block {
+  position: relative;
+  
+  left: 30%;
+  
+  height: 50px;
+  width: 150px;
+
+  padding-top: 20px;
+
+  border: 5px dashed grey;
+  align-self: flex-start;
+
+  background-color: rgb(173, 230, 195);
+
+  color: whitesmoke;
+  text-align: center;
+  
+  animation-name: firstBlockAppearance;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+
+@keyframes secondBlockAppearance {
+  0% { opacity: 0; }
+  10% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.second-block {
+  position: relative;
+  top: -10%;
+  right: 30%;
+  
+  height: 50px;
+  width: 150px;
+  padding-top: 20px;
+
+  border: 5px dashed grey;
+  align-self: flex-end;
+  
+  background-color: lightblue;
+
+  text-align: center;
+  color: whitesmoke;
+
+  animation-name: secondBlockAppearance;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+
+@keyframes thirdBlockAppearance {
+  0% { opacity: 0; }
+  20% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.third-block {
+  position: relative;
+  top: 10%;
+  
+  height: 50px;
+  width: 500px;
+  padding-top: 20px;
+
+  border: 5px dashed grey;
+
+  text-align: center;
+  color: black;
+
+  animation-name: thirdBlockAppearance;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+
+@keyframes introPaperPrototype {
+  0% { color: #ffe083; text-shadow: 5px 5px #a1afa2; }
+  100% { color: #ffca30; text-shadow: 1px 1px #161616; }
+}
+
+.paper-prototype-text {
+  color: #ffe083;
+  text-shadow: 1px 1px #161616;
+
+  animation-name: introPaperPrototype;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+
+/* END INTRO */
+
+/* 5.2 START OF MAIN PAGE PAPER */
 
 .paper {
   display: flex;
@@ -909,7 +948,7 @@ a:active {
   align-items: center;
 
   animation-name: hidden;
-  animation-duration: 7s;
+  animation-duration: 4s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
@@ -1002,103 +1041,195 @@ a:active {
   margin: 0;
   padding: 0;
 }
+
 /* END OF PAPER PROTOTYPE */
 
-/* START OF INFO STRUCTURE */
 
-.structure-sections {
+/* 6. START OF INTERACTIVE PROTOTYPE STYLES */
+
+/* 6.1 START INTRO */
+
+.interactive-portotype {
+  position: fixed; 
+  top: 0;
+
+  height: 100vh;
+  width: 100%;
+  text-transform: uppercase;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.proto-coursor {
+  height: 40px;
+  border-right: 2px solid black;
+  font-size: 40px;
+  font-weight: 400;
+
+  opacity: 1;
+  font-weight: 200;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.big-red {
+  font-size: 40px;
+  color: #df386e;
+  letter-spacing: 10px;
+}
+
+/* END OF INTRO */
+
+/* 6.2 START OF MAIN PAGE INTERACTIVE PROTOTYPE */
+
+@keyframes hidden {
+  0% { opacity: 0; }
+  85% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.prototype-container {
   display: flex;
   flex-direction: column;
-  
   align-items: center;
 
   animation-name: hidden;
-  animation-duration: 7s;
+  animation-duration: 4s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
 
-.structure-wrapper {
-  height: 350px;
+.prototype-wrapper {
+  min-height: 300px;
   max-width: 1100px;
 
   display: flex;
-  justify-content: space-around;
+  align-items: flex-start;
 }
 
-.structure-preview {
-  width: 30%;
+.prototype-preview {
+  max-width: 30%;
 }
 
-.structure-preview h1 {
-  margin: 0;
-  padding: 0;
-
-  color: #3fade0;
+.prototype-preview h1 {
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  color: #df386e;
 }
 
-.structure-preview-pic:before {
-  content: "";
-
-  position: relative;
-  top: -200px;
-  left: -30%;
-
-  border: 150px solid;
+.angle-interactive-prototype {
+  margin-left: 30%;
+  max-width: 40%;
+  border: 150px solid #fff;
   border-top-width: 0;
   border-left-width: 0;
-  border-bottom-color: #3fade0;
+  border-bottom-color: #df386e;
   border-right-color: transparent;
 }
 
-.structure-preview-pic {
-  width: 30%;
+.prototype-picture-first {
+  max-width: 30%;
 }
 
-.structure-features-items {
-  margin: 0;
-  padding: 0;
+.prototype-picture-two {
+  margin-right: 20px;
 
+  margin-left: 13%;
+  width: 10%;
+}
+
+.prototype-features-preview {
+  align-self: baseline;
+
+  margin-left: 5%;
+
+  width: 40%;
+}
+
+.prototype-features-preview:after {
+  position: relative;
+  right: 10%;
+  bottom: 50px;
+
+  content: "1";
+  color: #df386e;
+  font-size: 40px;
+}
+
+.prototype-features-preview h2 {
+  margin-top: 0;
+}
+
+.prototype-features-items {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.structure-wrapper-fiatures {
-  margin-bottom: 40px;
-
-  min-width: 1100px;
-  max-width: 1100px;
-  min-height: 200px;
-  
-  display: flex;
-  justify-content: space-evenly;
+.prototype-features-items div {
+  margin-bottom: 50px;
 }
 
-.structure-wrapper-fiatures {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.structure-features-item {
-  width: 30%;
+.prototype-features-item {
   list-style: none;
 }
 
-.structure-features-item h2 {
-  margin: 0;
-  padding: 0;
+.fiatures-div-first {
+  min-width: 1000px;
+
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.structure-feature-pic {
-  width: 30%;
-  max-height: 300px;
+.fiatures-div-first:before {
+  content: "2";
+  color: #df386e;
+  font-size: 40px;
 }
 
-/* END OF INFO STRUCTURE */
+.fiatures-div-second {
+  min-width: 1000px;
 
-/* START OF FOOTER */
+  display: flex;
+  justify-content: space-between;
+}
+
+.fiatures-div-second:after {
+  position: relative;
+  right: 60%;
+
+  content: "3";
+  color: #df386e;
+  font-size: 40px;
+}
+
+.fiatures-div-third {
+  min-width: 1000px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.fiatures-div-third:before {
+  content: "4";
+  color: #df386e;
+  font-size: 40px;
+}
+
+.prototype-features-items li {
+  max-width: 30%;
+}
+
+/* END OF INTERACTIVE PROTOTYPE STYLES */
+
+/* 7 START OF FOOTER */
 
 .footer-container {
   position: relative;
@@ -1112,108 +1243,3 @@ a:active {
 }
 
 /* END OF FOOTER */
-
-/* HOME PAGE STYLES */
-
-video {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-html, body {
-  height: 100%;
-}
-html {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 150%;
-  line-height: 1.4;
-}
-body {
-  margin: 0;
-}
-
-.viewport-header {
-  position: relative;
-  margin-top: 80vh;
-  height: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-
-}
-
-.viewport-header h1 {
-  text-transform: uppercase;
-  text-align: center;
-  color: #3fade0;
-  
-}
-
-.viewport-header span {
-  display: inline-block;
-  margin-top: 10px;
-}
-
-.main {
-  background: white;
-  color: black;
-  position: relative;
-  padding: 1rem;
-  
-}
-
-.main p {
-  max-width: 600px;
-  margin: 1rem auto;
-}
-
-.main li {
-  list-style: none;
-  margin-bottom: 40px;
-}
-
-.homepage-tour {
-  margin: auto;
-  max-width: 1100px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.homepage-tour-item {
-  max-width: 40%;
-  min-height: 400px;
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.homepage-pic {
-  max-height: 400px;
-  filter: grayscale(100);
-}
-
-@keyframes picToColors {
-  from { filter: grayscale(100); position: relative; bottom: 0px; }
-  to { filter: grayscale(0); position: relative; bottom: 10px }
-}
-
-.homepage-pic:hover,
-.homepage-pic:active {
-  animation-name: picToColors;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-  animation-fill-mode: both;
-}
-
-/* END PAGE STYLES */
